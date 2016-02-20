@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vulnerable.tech | A demo platform for worst-case programming</title>
+    <title>vulnerable.tech | Cookies | v2</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <?php require_once('scripts/getCSSStyling.php'); ?>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,27 +31,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">vulnerable.tech | A demo platform for worst-case programming</a>
+          <a class="navbar-brand" href="/">Deine Startseite - v2</a>
         </div>
       </div>
     </nav>
 
     <div class="container">
       <div class="starter-template">
-        <h1>Demos</h1>
+        <?php require_once('scripts/getErrorsIfAny.php'); ?>
+
+        <h1>Deine Startseite</h1>
         <hr>
-        <h2>Cookies</h2>
-        <ul class="lead">
-        	<li><a href="demos/cookies/v1">Customizable Homepage v1</a></li>
-        	<li><a href="demos/cookies/v2">Customizable Homepage v2</a></li>
+        <h2>Top-Links:</h2>
+        <ul>
+          <li><a href="https://golem.de">Golem</a></li>
+          <li><a href="https://heise.de">Heise</a></li>
+          <li><a href="https://google.de">Google</a></li>
         </ul>
-        <h2>MySQL</h2>
-        <ul class="lead">
-        	<li><a href="demos/mysql/v1">The Guestbook</a></li>
-        	<li><a href="demos/mysql/v2">The Awesome and Secure Guestbook</a></li>
-        	<li><a href="demos/mysql/login">Login</a></li>
-        </ul>
-      </div>
+        <hr>
+        <?php require_once('form.php'); ?>
     </div>
 
     <script src="js/jquery.min.js"></script>
