@@ -4,3 +4,21 @@ body {
 .starter-template {
   padding: 40px 15px;
 }
+
+button a {
+  color: black !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+}
+
+button a:hover {
+  color: black !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+}
+
+button a:active {
+  color: black !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+}
