@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vulnerable.tech | A demo platform for worst-case programming</title>
+    <title>firewall.info | Your Firewall Status</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,35 +28,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">vulnerable.tech | A demo platform for worst-case programming</a>
+          <a class="navbar-brand" href="/">firewall.info | Your Firewall Status</a>
         </div>
       </div>
     </nav>
 
     <div class="container">
       <div class="starter-template">
-        <h1>Demos</h1>
+        <?php require_once('displayStatus.php'); ?>
         <hr>
-        <h2>XSS (Cross Site Scripting)</h2>
-        <ul class="lead">
-        	<li><a href="demos/xss">Your Quote v1</a></li>
-        	<li><a href="demos/xss/sanitized">Your Quote v2</a></li>
-        </ul>
-        <h2>CSRF (Cross Site Request Forgery)</h2>
-        <ul class="lead">
-        	<li><a href="demos/csrf">Advertisement</a></li>
-        </ul>
-        <h2>Cookies</h2>
-        <ul class="lead">
-        	<li><a href="demos/cookies/v1">Customizable Homepage v1</a></li>
-        	<li><a href="demos/cookies/v2">Customizable Homepage v2</a></li>
-        </ul>
-        <h2>MySQL</h2>
-        <ul class="lead">
-        	<li><a href="demos/mysql/v1">Login v1</a></li>
-        	<li><a href="demos/mysql/v2">Login v2</a></li>
-        	<li><a href="demos/mysql/v3">Login v3</a></li>
-        </ul>
+        <a href="set.php?status=on" class="btn btn-default">Firewall <span style="color: green; font-weight: bold;">anschalten</span></a>
+        <a href="set.php?status=off" class="btn btn-default">Firewall <span style="color: red; font-weight: bold;">ausschalten</span></a>
       </div>
     </div>
 
