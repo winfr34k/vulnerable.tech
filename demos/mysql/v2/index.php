@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vulnerable.tech | A demo platform for worst-case programming</title>
+    <title>vulnerable.tech | MySQL | v2</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -19,7 +20,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -29,27 +29,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">vulnerable.tech | A demo platform for worst-case programming</a>
+          <a class="navbar-brand" href="/">Login - v2</a>
         </div>
       </div>
     </nav>
 
     <div class="container">
       <div class="starter-template">
-        <h1>Demos</h1>
+        <?php require_once('scripts/getMessagesIfAny.php'); ?>
+        <h1>Login</h1>
         <hr>
-        <h2>Cookies</h2>
-        <ul class="lead">
-        	<li><a href="demos/cookies/v1">Customizable Homepage v1</a></li>
-        	<li><a href="demos/cookies/v2">Customizable Homepage v2</a></li>
-        </ul>
-        <h2>MySQL</h2>
-        <ul class="lead">
-        	<li><a href="demos/mysql/v1">Login v1</a></li>
-        	<li><a href="demos/mysql/v2">Login v2</a></li>
-        	<li><a href="demos/mysql/v3">Login v3</a></li>
-        </ul>
-      </div>
+        <?php require_once('form.php'); ?>
     </div>
 
     <script src="js/jquery.min.js"></script>
