@@ -1,11 +1,11 @@
 <?php
   if (count($_POST) > 0) {
     //Allow all letters, numbers and () as well as # (for colors), whitespace (spaces etc.) and commas
-    $pattern = '/[\s\w#(),]/';
+    $pattern = '/[^\s\w#(),\-]/';
     $thirtyDaysFromNowInSeconds = time() + (86400 * 30);
 
     //If the strings contain more than the allowed characters, they won't be empty after this, so we'll need to throw an error
-    if (!empty(preg_replace($pattern, '', $_POST['color'])) || !empty(preg_replace($pattern, '', $_POST['text-decoration']))) {
+    if (preg_match($pattern, $_POST['color']) || preg_match($pattern, $_POST['text-decoration'])) {
       if (!in_array($_POST['text-decoration'], array('none', 'underline', 'overline', 'line-through'))) {
         setcookie('error', 'Bitte wählen Sie einen gültigen Wert für die Textdekoration!', time() + 3600, '/');
         header('Location: ' . $_SERVER['HTTP_REFERER']);
